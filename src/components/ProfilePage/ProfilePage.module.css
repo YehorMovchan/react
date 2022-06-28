@@ -1,0 +1,87 @@
+.content {
+    grid-area: content;
+    background: rgb(155, 155, 155);
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "banner banner banner"
+        "profile-info profile-info space"
+        "make-post make-post make-post"
+        "posts posts posts";
+    overflow: scroll;
+}
+
+.content::-webkit-scrollbar{
+    display: none;
+}
+
+.banner {
+    grid-area: banner;
+}
+
+.banner img {
+    height: 100px;
+    min-width: 100%;
+}
+
+.avatar {
+    grid-area: avatar;
+    display: flex;
+    justify-content: center;
+}
+
+.avatar img {
+    border: 2px white solid;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.info {
+    display: grid;
+    grid-area: profile-info;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "avatar name""avatar info";
+}
+
+.detail {
+    grid-area: info;
+}
+
+.make_post {
+    grid-area: make-post;
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.make_post textarea {
+    width: 100%;
+    resize: none;
+}
+
+.make_post input {
+    border-radius: 10%;
+    margin-top: 10px;
+    float: right;
+    width: 150px;
+    height: 40px;
+    font-size: 25px;
+    background: rgb(48, 48, 48);
+    color: white;
+    cursor: pointer;
+}
+
+.make_post input:hover {
+    background: rgb(202, 202, 202);
+    color: black;
+    border: none;
+}
+.name{
+    font-size: 25pt;
+    color: white;
+    font-weight: bold;
+}

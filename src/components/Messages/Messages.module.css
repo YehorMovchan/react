@@ -1,0 +1,64 @@
+.content {
+    grid-area: content;
+    background: rgb(155, 155, 155);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "dialogs-list dialogs";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.messages {
+    grid-area: dialogs-list;
+}
+
+.item {
+    padding: 5px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10%;
+    display: grid;
+    grid-template-columns: 2fr 10fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "avatar name count""avatar message count";
+    width: 90%;
+    border: 2px white solid;
+    height: 70px;
+    cursor: pointer;
+}
+
+.item:hover {
+    border-bottom: 4px white solid;
+    border-left: 4px white solid;
+}
+
+.avatar {
+    grid-area: avatar;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.textMessage {
+    margin-left: 10px;
+    font-size: 15px;
+    grid-area: message;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.name {
+    margin-left: 10px;
+    font-size: 25pt;
+    color: white;
+}

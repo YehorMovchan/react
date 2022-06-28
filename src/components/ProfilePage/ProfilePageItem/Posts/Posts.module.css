@@ -1,0 +1,56 @@
+.posts {
+    margin: auto;
+    margin-top: 0px;
+    width: 80%;
+    grid-area: posts;
+    word-break: break-all;
+}
+
+.avatar{
+    width: max-content;
+}
+
+.posts span {
+    font-size: 25pt;
+}
+
+.item {
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "avatar message""avatar details";
+}
+
+.avatar img {
+    grid-area: avatar;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.message {
+    grid-area: message;
+    padding: 20px;
+}
+
+.details {
+    grid-area: details;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.details div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    height: 30px;
+    font-size: 20px;
+    width: 100px;
+    background: rgb(120, 147, 163);
+    border-radius: 5%;
+    border: 2px white solid;
+}

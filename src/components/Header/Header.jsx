@@ -1,12 +1,13 @@
+import HeaderCss from './Header.module.css'
 
 
-const Header=()=>{
+const Header=(props)=>{
     return(
-        <div className="header">
-            <div className="logo">
+        <div className={HeaderCss.header}>
+            <div className={HeaderCss.logo}>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="react-logo" />
             </div>
-            <div className="name">
+            <div className={HeaderCss.name}>
                 React discussion
             </div>
         </div>

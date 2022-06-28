@@ -1,0 +1,41 @@
+.nav {
+    grid-area: nav;
+    background: rgb(88, 88, 88);
+}
+
+a {
+    text-decoration: none;
+}
+
+a.active .item {
+    background: rgb(198, 177, 231);
+}
+
+.item {
+    margin: auto;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 30pt;
+    color: black;
+    width: 90%;
+    background: white;
+    border: 2px black solid;
+    cursor: pointer;
+}
+
+.item:hover {
+    border-top: none;
+    border-right: none;
+}
+
+.content {
+    grid-area: content;
+    background: rgb(155, 155, 155);
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 150px auto 1fr;
+    grid-template-areas:
+        "banner banner banner"
+        "profile-info profile-info space"
+        "make-post make-post make-post";
+}
